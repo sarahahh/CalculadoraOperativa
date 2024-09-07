@@ -33,8 +33,22 @@ public class Validations {
                 int retornar = Integer.parseInt(bIn.readLine());
                 return retornar;
             } catch(NumberFormatException e) {
-            System.err.println("Debe ingresar un dato entero");
+            System.err.println("Debe ingresar un dato entero. \n");
             }
         } while(true);
+    }
+    
+    public int validationBin(String label) throws IOException {
+        int bin = validationInt(label);
+        int i = bin;
+        while (i >= 1) {
+            if (i % 10 > 1) {
+                System.out.println("El numero ingresado no es binario");
+                bin = validationInt(label);
+                i = bin;
+            }
+            i = i / 10;
+        }
+        return bin;
     }
 }

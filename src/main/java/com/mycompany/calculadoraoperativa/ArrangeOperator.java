@@ -5,11 +5,6 @@
 package com.mycompany.calculadoraoperativa;
 
 import Operators.Operators;
-<<<<<<< HEAD
-import Utility.Input;
-import java.io.IOException;
-=======
->>>>>>> origin/master
 
 /**
  *
@@ -18,13 +13,10 @@ import java.io.IOException;
 public class ArrangeOperator {
     private int a;
     private int b;
-<<<<<<< HEAD
-    private float value1;
-    private float value2;
-=======
     private final float value1;
     private final float value2;
->>>>>>> origin/master
+    private final int valueBin1;
+    private final int valueBin2;
     
     public Operators operator = new Operators();
     
@@ -33,17 +25,19 @@ public class ArrangeOperator {
         this.b = b;
         this.value1 = value1;
         this.value2 = value2;
+        this.valueBin1 = 0;
+        this.valueBin2 = 0;
     }
     
-<<<<<<< HEAD
-    public void operacion() {
-        Input In = new Input();
-        if(a == 1 && b == 1) {
-            float result = operator.sumar(value1, value2);
-            
-            System.out.println(value1 + " + " + value2 + " = " + result);
-        }
-=======
+    public ArrangeOperator(int a, int b, int valueBin1, int valueBin2) {
+        this.a = a;
+        this.b = b;
+        this.valueBin1 = valueBin1;
+        this.valueBin2 = valueBin2;
+        this.value1 = 0;
+        this.value2 = 0;
+    }
+    
     public String arithmeticOperator() {
         float result;
         if(a == 1 && b == 1) {
@@ -63,7 +57,18 @@ public class ArrangeOperator {
             return value1 + " % " + value2 + " = " + result;
         }
         return "Alguna opcion es incorrecta";
->>>>>>> origin/master
+    }
+    
+    public String operatorBinarios() {
+        int result;
+        if(a == 2 && b == 1) {
+            result = operator.orBin(valueBin1, valueBin2);
+            return Integer.toBinaryString(valueBin1) + " OR " + Integer.toBinaryString(valueBin2) + " = " + Integer.toBinaryString(result);
+        } else if (a == 2 && b == 2) {
+            result = operator.andBin(valueBin1, valueBin2);
+            return Integer.toBinaryString(valueBin1) + " AND " + Integer.toBinaryString(valueBin2) + " = " + Integer.toBinaryString(result);
+        }
+        return "";
     }
     
 }

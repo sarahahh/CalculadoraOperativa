@@ -39,8 +39,12 @@ public class Input {
         return dato;
     }
     
-    public static float leerFloat(String mensaje)throws IOException{
+    public static float leerFloat(String mensaje) throws IOException {
         return vali.validationFloat(mensaje);
     }    
+    
+    public static int leerBin(String messange) throws IOException {
+        return vali.validationBin(messange);
+    }
     
 }
