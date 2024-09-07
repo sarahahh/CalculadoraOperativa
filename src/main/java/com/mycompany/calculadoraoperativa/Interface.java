@@ -25,7 +25,14 @@ public class Interface {
                 float value1 = In.leerFloat("Ingrese un valor: ");
                 float value2 = In.leerFloat("Ingrese un valor: ");
                 ArrangeOperator operator = new ArrangeOperator(decition1, decition2, value1, value2);
+<<<<<<< HEAD
                 operator.operacion();
+=======
+                System.out.println(operator.arithmeticOperator());
+                break;
+            default:
+                System.out.println("Opcion incorrecta.");
+>>>>>>> origin/master
                 break;
         }
     }
