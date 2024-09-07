@@ -1,0 +1,6 @@
+com\mycompany\calculadoraoperativa\CalculadoraOperativa.class
+Utility\Input.class
+Operators\Operators.class
+com\mycompany\calculadoraoperativa\Interface.class
+com\mycompany\calculadoraoperativa\ArrangeOperator.class
+Utility\Validations.class
